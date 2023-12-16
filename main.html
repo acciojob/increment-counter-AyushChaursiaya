@@ -9,9 +9,20 @@
 <body>
 	<!-- the entire body must be written by student -->
 	<p id="counter">0</p>
-	<button id="incrementBtn" onclick="getElemetById()">Increment</button>
+	<button id="incrementBtn" onclick="getElementById()">Increment</button>
 	
     <script type="text/javascript" src="./script.js">
+		function incrementCounter() {
+            // Get the current value of the counter
+            var counterElement = document.getElementById('counter');
+            var currentValue = parseInt(counterElement.innerText);
+
+            // Display an alert with the un-incremented value
+            alert('Un-incremented value: ' + currentValue);
+
+            // Increment the counter value
+            counterElement.innerText = currentValue + 1;
+        }
 </script>
 
 </body>
