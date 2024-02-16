@@ -1,30 +1,36 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Increment Counter</title>
 </head>
-
 <body>
-	<!-- the entire body must be written by student -->
-	<p id="counter">0</p>
-	<button id="incrementBtn" onclick="getElementById()">Increment</button>
-	
-    <script type="text/javascript" src="./script.js">
-		function incrementCounter() {
-            // Get the current value of the counter
-            var counterElement = document.getElementById('counter');
-            var currentValue = parseInt(counterElement.innerText);
+  <p id="counter">0</p>
+  <button id="incrementBtn">Increment</button>
 
-            // Display an alert with the un-incremented value
-            alert('Un-incremented value: ' + currentValue);
+  <script>
+    // Get references to the counter paragraph and the increment button
+    const counterParagraph = document.getElementById('counter');
+    const incrementButton = document.getElementById('incrementBtn');
 
-            // Increment the counter value
-            counterElement.innerText = currentValue + 1;
-        }
-</script>
+    // Function to handle the button click
+    function incrementCounter() {
+      // Get the current value of the counter
+      let currentValue = parseInt(counterParagraph.textContent);
 
+      // Display an alert with the un-incremented value
+      alert("Current counter value: " + currentValue);
+
+      // Increment the counter value
+      currentValue++;
+
+      // Update the counter paragraph with the new value
+      counterParagraph.textContent = currentValue;
+    }
+
+    // Add event listener to the increment button
+    incrementButton.addEventListener('click', incrementCounter);
+  </script>
 </body>
-
 </html>
