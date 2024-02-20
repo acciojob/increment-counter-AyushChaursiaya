@@ -8,9 +8,9 @@
 
 let count = 0;
 const counter = document.getElementById("counter");
-count btn = document.getElementById("incrementBtn");
+const btn = document.getElementById("incrementBtn");
 
-btn.eventListener("click", function incrementCounter() {
+btn.addEventListener("click", function incrementCounter() {
 	count++;
 	alert(counter.innerText = `${count}`);
-})
+});
