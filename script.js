@@ -6,3 +6,11 @@
 // 	crementElement.innerText = crementValue + 1;
 // }
 
+let count = 0;
+const counter = document.getElementById("counter");
+count btn = document.getElementById("incrementBtn");
+
+btn.eventListener("click", function incrementCounter() {
+	count++;
+	alert(counter.innerText = `${count}`);
+})
